@@ -1,17 +1,33 @@
-/* General Styles */
+/* GLOBAL */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #f4fefe;
+    color: #333;
 }
 
-/* Header */
+/* HEADER */
 header {
-    background-color: #4CAF50;
+    background-color: #008080;
     color: white;
-    padding: 20px;
+    padding: 30px 20px;
     text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+nav {
+    margin-top: 15px;
 }
 
 nav a {
@@ -21,47 +37,57 @@ nav a {
     font-weight: bold;
 }
 
-/* Service Sections */
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* MAIN */
+main {
+    padding: 30px 15px;
+}
+
+/* SERVICE SECTIONS */
 .service {
     background-color: white;
-    margin: 20px auto;
-    padding: 30px;
     max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 25px auto;
+    padding: 30px;
     text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .service h2 {
-    color: #4CAF50;
+    color: #008080;
     margin-bottom: 15px;
 }
 
 .service p {
-    margin-bottom: 20px;
     font-size: 16px;
-    color: #333;
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
 
+/* BUTTONS */
 .service button {
-    background-color: #4CAF50;
+    background-color: #008080;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
 
 .service button:hover {
-    background-color: #45a049;
+    background-color: #006666;
 }
 
-/* Footer */
+/* FOOTER */
 footer {
-    background-color: #333;
+    background-color: #002f2f;
     color: white;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
+    padding: 15px;
+    margin-top: 40px;
 }

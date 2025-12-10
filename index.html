@@ -3,46 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jokare Services</title>
+    <title>Jokare</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Jokare</h1>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Jokare Language Section -->
-        <section class="service" id="language">
-            <h2>Jokare Language</h2>
-            <p>Learn English with personalized lessons designed for Japanese speakers. Online or in-person options available.</p>
-            <button onclick="alert('Contact us to book a lesson!')">Learn More</button>
-        </section>
+<header>
+    <h1>Jokare</h1>
+    <p>Connecting Language, Culture, and People</p>
+    <nav>
+        <a href="#language">Language</a>
+        <a href="#store">Store</a>
+        <a href="#rent">Rent</a>
+    </nav>
+</header>
 
-        <!-- Jokare Store Section -->
-        <section class="service" id="store">
-            <h2>Jokare Store</h2>
-            <p>Shop authentic Japanese merchandise from the comfort of your home. Perfect gifts and collectibles!</p>
-            <button onclick="alert('Visit our store soon!')">Visit Store</button>
-        </section>
+<main>
 
-        <!-- Jokare Rent Section -->
-        <section class="service" id="rent">
-            <h2>Jokare Rent</h2>
-            <p>Hire a foreigner for language practice, cultural guidance, or other tasks. Flexible and reliable service.</p>
-            <button onclick="alert('Contact us to hire someone!')">Hire Now</button>
-        </section>
-    </main>
+    <section class="service" id="language">
+        <h2>Jokare Language</h2>
+        <p>
+            English lessons designed for Japanese learners.  
+            Friendly, practical, and personalised.
+        </p>
+        <button data-service="Language">Learn More</button>
+    </section>
 
-    <footer>
-        <p>&copy; 2025 Jokare</p>
-    </footer>
+    <section class="service" id="store">
+        <h2>Jokare Store</h2>
+        <p>
+            Authentic Japanese goods and merchandise,
+            curated for international customers.
+        </p>
+        <button data-service="Store">Visit Store</button>
+    </section>
 
-    <script src="script.js"></script>
+    <section class="service" id="rent">
+        <h2>Jokare Rent</h2>
+        <p>
+            Need a foreigner for language practice,
+            events, or cultural support? Hire with confidence.
+        </p>
+        <button data-service="Rent">Hire Now</button>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2025 Jokare. All rights reserved.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
