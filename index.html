@@ -1,56 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jokare</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Jokare</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Jokare</h1>
-    <p>Connecting Language, Culture, and People</p>
-    <nav>
-        <a href="#language">Language</a>
-        <a href="#store">Store</a>
-        <a href="#rent">Rent</a>
-    </nav>
+  <h1 data-en="Jokare" data-ja="ジョカレ">Jokare</h1>
+  <p data-en="Language • Culture • People" data-ja="言語・文化・人をつなぐ">Language • Culture • People</p>
+
+  <nav>
+    <a href="index.html" data-en="Home" data-ja="ホーム">Home</a>
+    <a href="language.html" data-en="Language" data-ja="言語">Language</a>
+    <a href="store.html" data-en="Store" data-ja="ストア">Store</a>
+    <a href="rent.html" data-en="Rent" data-ja="レンタル">Rent</a>
+    <a href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a>
+  </nav>
+
+  <button class="lang-toggle" onclick="toggleLanguage()">日本語 / EN</button>
 </header>
 
 <main>
+  <section class="service">
+    <h2 data-en="Jokare Language" data-ja="ジョカレ・ランゲージ">Jokare Language</h2>
+    <p data-en="English lessons for Japanese learners." data-ja="日本語話者のための英語レッスン。">English lessons for Japanese learners.</p>
+    <a class="cta" href="language.html" data-en="Learn More" data-ja="詳細を見る">Learn More</a>
+  </section>
 
-    <section class="service" id="language">
-        <h2>Jokare Language</h2>
-        <p>
-            English lessons designed for Japanese learners.  
-            Friendly, practical, and personalised.
-        </p>
-        <button data-service="Language">Learn More</button>
-    </section>
+  <section class="service">
+    <h2 data-en="Jokare Store" data-ja="ジョカレ・ストア">Jokare Store</h2>
+    <p data-en="Japanese merchandise for global customers." data-ja="海外向けの日本製品・グッズ。">Japanese merchandise for global customers.</p>
+    <a class="cta" href="store.html" data-en="Visit Store" data-ja="ストアを見る">Visit Store</a>
+  </section>
 
-    <section class="service" id="store">
-        <h2>Jokare Store</h2>
-        <p>
-            Authentic Japanese goods and merchandise,
-            curated for international customers.
-        </p>
-        <button data-service="Store">Visit Store</button>
-    </section>
-
-    <section class="service" id="rent">
-        <h2>Jokare Rent</h2>
-        <p>
-            Need a foreigner for language practice,
-            events, or cultural support? Hire with confidence.
-        </p>
-        <button data-service="Rent">Hire Now</button>
-    </section>
-
+  <section class="service">
+    <h2 data-en="Jokare Rent" data-ja="ジョカレ・レント">Jokare Rent</h2>
+    <p data-en="Hire a foreigner for language practice, cultural help or events." data-ja="語学練習・イベント・文化サポートのために外国人を雇えます。">Hire a foreigner for language practice, cultural help or events.</p>
+    <a class="cta" href="rent.html" data-en="Hire Now" data-ja="今すぐ雇う">Hire Now</a>
+  </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 Jokare. All rights reserved.</p>
+  <p>&copy; 2025 Jokare</p>
 </footer>
 
 <script src="script.js"></script>
