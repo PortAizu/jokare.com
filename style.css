@@ -68,12 +68,19 @@ main.page {
 form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 form label {
     font-weight: bold;
     font-size: 15px;
+    margin-bottom: 6px;
 }
 
 form input,
@@ -132,41 +139,5 @@ button.cta:hover {
 footer {
     background-color: #004c4c;
     color: white;
-    text-align: center;
-    padding: 18px;
-    font-size: 14px;
-    margin-top: 40px;
-}
+    text-
 
-/* --- RESPONSIVE FIXES FOR MOBILE --- */
-@media (max-width: 600px) {
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 5px 8px;
-    }
-
-    main.page {
-        padding: 15px;
-    }
-
-    form input,
-    form select,
-    form textarea {
-        font-size: 15px;
-        padding: 10px;
-    }
-
-    button.cta {
-        font-size: 16px;
-        padding: 12px;
-    }
-
-    .service {
-        padding: 20px;
-    }
-}

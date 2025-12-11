@@ -1,15 +1,21 @@
 <form id="contactForm" onsubmit="return sendMail(event)">
 
-  <label data-en="Your name" data-ja="お名前">Your name</label>
-  <input type="text" name="name" required>
+  <div class="form-row">
+    <label data-en="Your name" data-ja="お名前">Your name</label>
+    <input type="text" name="name" required>
+  </div>
 
-  <label data-en="Your email address" data-ja="あなたのメールアドレス">
-    Your email address
-  </label>
-  <input type="email" name="email" required>
+  <div class="form-row">
+    <label data-en="Your email address" data-ja="あなたのメールアドレス">
+      Your email address
+    </label>
+    <input type="email" name="email" required>
+  </div>
 
-  <label data-en="Message" data-ja="メッセージ">Message</label>
-  <textarea name="message" rows="6" required></textarea>
+  <div class="form-row">
+    <label data-en="Message" data-ja="メッセージ">Message</label>
+    <textarea name="message" rows="6" required></textarea>
+  </div>
 
   <button type="submit" class="cta" data-en="Send" data-ja="送信">Send</button>
 
