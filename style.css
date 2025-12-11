@@ -161,4 +161,20 @@ footer {
         padding: 12px;
     }
 }
+/* PAGE CONTENT STYLING */
+.page-content {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.page-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 
