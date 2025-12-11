@@ -9,6 +9,7 @@
 <body>
 
 <header>
+  <img src="images/logo.png" alt="Jokare Logo" class="logo">
   <h1 data-en="Contact Jokare" data-ja="ジョカレへのお問い合わせ">Contact Jokare</h1>
 
   <nav>
@@ -21,15 +22,13 @@
   <button class="lang-toggle" onclick="toggleLanguage()">日本語 / EN</button>
 </header>
 
-<main class="page">
+<main class="page-content">
+  <img src="images/contact.jpg" alt="Contact us" class="page-img">
 
-  <!-- CONTACT FORM BOX -->
   <div class="contact-box">
-
     <h2 data-en="Send a Message" data-ja="メッセージ送信">Send a Message</h2>
 
     <form id="contactForm" onsubmit="return sendMail(event)">
-
       <div class="form-row">
         <label data-en="Your name" data-ja="お名前">Your name</label>
         <input type="text" name="name" required>
@@ -52,11 +51,8 @@
          data-ja="これはあなたのメールアプリを開きます。">
          This opens your email app.
       </p>
-
     </form>
-
   </div>
-
 </main>
 
 <footer>
