@@ -11,47 +11,108 @@ body {
 header {
     background-color: #008080;
     color: white;
-    padding: 30px 20px;
+    padding: 20px;
     text-align: center;
 }
 
 header h1 {
     margin: 0;
-    font-size: 36px;
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 16px;
-    opacity: 0.9;
+    font-size: 28px;
 }
 
 nav {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 4px;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* LANGUAGE BUTTON */
+.lang-toggle {
+    margin-top: 15px;
+    background-color: #ffffff;
+    color: #008080;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lang-toggle:hover {
+    background-color: #e0ffff;
 }
 
 /* MAIN */
-main {
-    padding: 30px 15px;
+main.page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* SERVICE SECTIONS */
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* BUTTON */
+button.cta {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button.cta:hover {
+    background-color: #006666;
+}
+
+/* SERVICE BOXES (HOME PAGE) */
 .service {
     background-color: white;
     max-width: 800px;
-    margin: 25px auto;
-    padding: 30px;
+    margin: 20px auto;
+    padding: 25px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
@@ -59,103 +120,53 @@ main {
 
 .service h2 {
     color: #008080;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .service p {
-    font-size: 16px;
-    margin-bottom: 25px;
+    font-size: 15px;
     line-height: 1.6;
-}
-
-/* BUTTONS */
-.service button {
-    background-color: #008080;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.service button:hover {
-    background-color: #006666;
 }
 
 /* FOOTER */
 footer {
-    background-color: #002f2f;
+    background-color: #004c4c;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 18px;
+    font-size: 14px;
     margin-top: 40px;
 }
-/* CONTACT FORM LAYOUT FIX */
-#contactForm {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-/* Labels */
-#contactForm label {
-    font-size: 16px;
-    margin-bottom: 4px;
-    color: #004c4c;
-}
-
-/* Inputs, dropdowns, textarea */
-#contactForm input,
-#contactForm textarea,
-#contactForm select {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 2px solid #008080;
-    border-radius: 6px;
-    box-sizing: border-box;
-}
-
-/* Submit button */
-#contactForm button {
-    background: #008080;
-    color: white;
-    border: none;
-    padding: 14px;
-    font-size: 18px;
-    border-radius: 6px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-#contactForm button:hover {
-    background: #006666;
-}
-
-/* MOBILE FIXES */
-@media (max-width: 480px) {
-    #contactForm {
-        padding: 15px;
-        gap: 12px;
-    }
-
-    #contactForm input,
-    #contactForm textarea,
-    #contactForm select {
-        font-size: 15px;
-        padding: 10px;
-    }
+/* --- RESPONSIVE FIXES FOR MOBILE --- */
+@media (max-width: 600px) {
 
     header h1 {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     nav a {
         font-size: 14px;
-        margin: 0 8px;
+        padding: 5px 8px;
+    }
+
+    main.page {
+        padding: 15px;
+    }
+
+    form input,
+    form select,
+    form textarea {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    button.cta {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .service {
+        padding: 20px;
     }
 }
