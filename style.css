@@ -15,8 +15,15 @@ header {
     text-align: center;
 }
 
+header .logo {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
 header h1 {
-    margin: 0;
+    margin: 5px 0;
     font-size: 28px;
 }
 
@@ -57,96 +64,26 @@ nav a:hover {
     background-color: #e0ffff;
 }
 
-/* MAIN */
-main.page {
-    max-width: 600px;
-    margin: 0 auto;
+/* MAIN SERVICES GRID */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     padding: 20px;
 }
 
-/* CONTACT FORM BOX */
-.contact-box {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 20px auto;
-}
-
-.contact-box h2 {
-    margin-top: 0;
-    color: #008080;
-    text-align: center;
-    font-size: 24px;
-}
-
-/* FORM */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.form-row {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-form label {
-    font-weight: bold;
-    font-size: 15px;
-    margin-bottom: 6px;
-}
-
-form input,
-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-textarea {
-    resize: vertical;
-}
-
-/* BUTTON */
-button.cta {
-    background-color: #008080;
-    color: white;
-    border: none;
-    padding: 14px;
-    font-size: 17px;
-    border-radius: 6px;
-    cursor: pointer;
-    width: 100%;
-}
-
-button.cta:hover {
-    background-color: #006666;
-}
-
-/* FORM NOTE */
-.form-note {
-    margin-top: 5px;
-    font-size: 13px;
-    color: #666;
-    text-align: center;
-}
-
-/* SERVICE BOXES (HOME PAGE) */
 .service {
     background-color: white;
-    max-width: 800px;
-    margin: 20px auto;
     padding: 25px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .service h2 {
@@ -157,6 +94,33 @@ button.cta:hover {
 .service p {
     font-size: 15px;
     line-height: 1.6;
+}
+
+.service-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* CTA BUTTONS */
+button.cta {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 17px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    transition: transform 0.2s;
+}
+
+button.cta:hover {
+    background-color: #006666;
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -180,19 +144,21 @@ footer {
         padding: 5px 8px;
     }
 
-    .contact-box {
-        padding: 18px;
-        margin: 15px;
+    .service {
+        padding: 15px;
     }
 
-    .contact-box h2 {
-        font-size: 20px;
+    .service h2 {
+        font-size: 18px;
     }
 
-    form input,
-    form textarea,
+    .service p {
+        font-size: 14px;
+    }
+
     button.cta {
         font-size: 15px;
+        padding: 12px;
     }
 }
 
