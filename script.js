@@ -17,7 +17,7 @@ function sendMail(e) {
   const email = form.email.value;
   const message = form.message.value;
 
-  const to = "info@jokare.com"; // fixed destination email
+  const to = "info@jokare.com"; // <-- FIXED
 
   const subject = encodeURIComponent(`Jokare website message from ${name}`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);

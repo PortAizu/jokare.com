@@ -91,3 +91,71 @@ footer {
     padding: 15px;
     margin-top: 40px;
 }
+/* CONTACT FORM LAYOUT FIX */
+#contactForm {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Labels */
+#contactForm label {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #004c4c;
+}
+
+/* Inputs, dropdowns, textarea */
+#contactForm input,
+#contactForm textarea,
+#contactForm select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #008080;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+/* Submit button */
+#contactForm button {
+    background: #008080;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contactForm button:hover {
+    background: #006666;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 480px) {
+    #contactForm {
+        padding: 15px;
+        gap: 12px;
+    }
+
+    #contactForm input,
+    #contactForm textarea,
+    #contactForm select {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    nav a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+}

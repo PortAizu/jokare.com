@@ -1,68 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Contact Jokare</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<form id="contactForm" onsubmit="return sendMail(event)">
 
-<header>
-  <h1 data-en="Contact Jokare" data-ja="ジョカレへのお問い合わせ">Contact Jokare</h1>
-  <nav>
-    <a href="index.html" data-en="Home" data-ja="ホーム">Home</a>
-    <a href="language.html" data-en="Language" data-ja="言語">Language</a>
-    <a href="store.html" data-en="Store" data-ja="ストア">Store</a>
-    <a href="rent.html" data-en="Rent" data-ja="レンタル">Rent</a>
-  </nav>
-  <button class="lang-toggle" onclick="toggleLanguage()">日本語 / EN</button>
-</header>
+  <label data-en="Your name" data-ja="お名前">Your name</label>
+  <input type="text" name="name" required>
 
-<main class="page">
+  <label data-en="Your email address" data-ja="あなたのメールアドレス">
+    Your email address
+  </label>
+  <input type="email" name="email" required>
 
-  <!-- CONTACT FORM -->
-  <form id="contactForm" onsubmit="return sendMail(event)">
+  <label data-en="Message" data-ja="メッセージ">Message</label>
+  <textarea name="message" rows="6" required></textarea>
 
-    <!-- USER'S NAME -->
-    <label data-en="Your name" data-ja="お名前">Your name</label>
-    <input type="text" name="name" required>
+  <button type="submit" class="cta" data-en="Send" data-ja="送信">Send</button>
 
-    <!-- USER'S EMAIL (THEIR OWN) -->
-    <label data-en="Your email address" data-ja="あなたのメールアドレス">
-      Your email address
-    </label>
-    <input type="email" name="email" required>
+  <p id="formNote" style="margin-top:10px;font-size:13px;color:#666;"
+     data-en="This opens your email app."
+     data-ja="これはあなたのメールアプリを開きます。">
+     This opens your email app.
+  </p>
 
-    <!-- DESTINATION (YOU CHOOSE) -->
-    <label data-en="Send to" data-ja="送信先">Send to</label>
-    <select name="to">
-      <option value="info@jokare.com">General (info@jokare.com)</option>
-      <option value="language@jokare.com">Language (language@jokare.com)</option>
-      <option value="store@jokare.com">Store (store@jokare.com)</option>
-      <option value="rent@jokare.com">Rent (rent@jokare.com)</option>
-    </select>
-
-    <!-- MESSAGE -->
-    <label data-en="Message" data-ja="メッセージ">Message</label>
-    <textarea name="message" rows="6" required></textarea>
-
-    <!-- BUTTON -->
-    <button type="submit" class="cta" data-en="Send" data-ja="送信">Send</button>
-
-    <p id="formNote" style="margin-top:10px;font-size:13px;color:#666;"
-       data-en="This opens your email app." 
-       data-ja="これはあなたのメールアプリを開きます。">
-       This opens your email app.
-    </p>
-  </form>
-
-</main>
-
-<footer>
-  <p>&copy; 2025 Jokare</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+</form>
