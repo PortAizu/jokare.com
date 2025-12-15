@@ -10,7 +10,7 @@ function toggleLanguage() {
   isJapanese = !isJapanese;
 }
 
-// Contact form: automatic mailto with page-based routing
+// Contact form: automatic mailto with SOURCE-based routing
 function sendMail(e) {
   e.preventDefault();
 
@@ -20,18 +20,30 @@ function sendMail(e) {
   const email = form.email.value.trim();
   const message = form.message.value.trim();
 
+  // Read ?source= from URL
+  const params = new URLSearchParams(window.location.search);
+  const source = params.get("source");
+
   // Default email
   let to = "info@jokare.com";
 
-  const path = window.location.pathname.toLowerCase();
-
-  if (path.includes("language")) {
+  if (source === "language") {
     to = "language@jokare.com";
-  } else if (path.includes("store")) {
+  } else if (source === "store") {
     to = "store@jokare.com";
-  } else if (path.includes("rent")) {
+  } else if (source === "rent") {
     to = "rent@jokare.com";
   }
+
+  const subject = encodeURIComponent(`Jokare website message from ${name}`);
+  const body = encodeURIComponent(
+    `Source: ${source || "general"}\n\nName: ${name}\nEmail: ${email}\n\n${message}`
+  );
+
+  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+
+  return false;
+}
 
   const subject = encodeURIComponent(`Jokare website message from ${name}`);
   const body = encodeURIComponent(
