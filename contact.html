@@ -1,66 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Contact Jokare</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/logo.png">
+<meta charset="UTF-8">
+<title>Contact Jokare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
+
 <header>
-  <img src="images/logo.png" alt="Jokare Logo" class="logo">
-  <h1 data-en="Contact Jokare" data-ja="ジョカレへのお問い合わせ">Contact Jokare</h1>
+<img src="images/logo.png" alt="Jokare Logo" class="logo">
+<h1 data-en="Contact Jokare" data-ja="ジョカレへのお問い合わせ">Contact Jokare</h1>
 
-  <nav>
-    <a href="index.html" data-en="Home" data-ja="ホーム">Home</a>
-    <a href="language.html" data-en="Language" data-ja="言語">Language</a>
-    <a href="store.html" data-en="Store" data-ja="ストア">Store</a>
-    <a href="rent.html" data-en="Rent" data-ja="レンタル">Rent</a>
-  </nav>
 
-  <button class="lang-toggle" onclick="toggleLanguage()">日本語 / EN</button>
+<nav>
+<a href="index.html" data-en="Home" data-ja="ホーム">Home</a>
+<a href="language.html" data-en="Language" data-ja="言語">Language</a>
+<a href="store.html" data-en="Store" data-ja="ストア">Store</a>
+<a href="rent.html" data-en="Rent" data-ja="レンタル">Rent</a>
+</nav>
+
+
+<button class="lang-toggle" onclick="toggleLanguage()">日本語 / EN</button>
 </header>
 
+
 <main class="page-content">
-  <img src="images/contact.jpg" alt="Contact us" class="page-img">
+<img src="images/contact.jpg" alt="Contact Jokare" class="page-img">
 
-  <div class="contact-box">
-    <h2 data-en="Send a Message" data-ja="メッセージ送信">Send a Message</h2>
 
-    <form id="contactForm" onsubmit="return sendMail(event)">
-      <div class="form-row">
-        <label data-en="Your name" data-ja="お名前">Your name</label>
-        <input type="text" name="name" required>
-      </div>
+<div class="contact-box">
+<h2 data-en="Send a Message" data-ja="メッセージ送信">Send a Message</h2>
 
-      <div class="form-row">
-        <label data-en="Your email address" data-ja="あなたのメールアドレス">Your email address</label>
-        <input type="email" name="email" required>
-      </div>
 
-      <div class="form-row">
-        <label data-en="Message" data-ja="メッセージ">Message</label>
-        <textarea name="message" rows="6" required></textarea>
-      </div>
+<form id="contactForm" onsubmit="return sendMail(event)">
+<!-- source routing -->
+<input type="hidden" name="source" id="source">
 
-      <button type="submit" class="cta" data-en="Send" data-ja="送信">Send</button>
 
-      <p id="formNote" class="form-note"
-         data-en="This opens your email app."
-         data-ja="これはあなたのメールアプリを開きます。">
-         This opens your email app.
-      </p>
-    </form>
-  </div>
+<div class="form-row">
+<label data-en="Your name" data-ja="お名前">Your name</label>
+<input type="text" name="name" required>
+</div>
+
+
+<div class="form-row">
+<label data-en="Your email address" data-ja="あなたのメールアドレス">Your email address</label>
+<input type="email" name="email" required>
+</div>
+
+
+<div class="form-row">
+<label data-en="Message" data-ja="メッセージ">Message</label>
+<textarea name="message" rows="6" required></textarea>
+</div>
+
+
+<button type="submit" class="cta" data-en="Send" data-ja="送信">Send</button>
+
+
+<p class="form-note"
+data-en="This opens your email app."
+data-ja="これはあなたのメールアプリを開きます。">
+This opens your email app.
+</p>
+</form>
+</div>
 </main>
 
+
 <footer>
-  <p>&copy; 2025 Jokare</p>
+<p>&copy; 2025 Jokare</p>
 </footer>
+
 
 <script src="script.js"></script>
 </body>
