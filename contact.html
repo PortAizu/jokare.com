@@ -9,11 +9,9 @@
 </head>
 <body>
 
-
 <header>
 <img src="images/logo.png" alt="Jokare Logo" class="logo">
 <h1 data-en="Contact Jokare" data-ja="ジョカレへのお問い合わせ">Contact Jokare</h1>
-
 
 <nav>
 <a href="index.html" data-en="Home" data-ja="ホーム">Home</a>
@@ -22,59 +20,49 @@
 <a href="rent.html" data-en="Rent" data-ja="レンタル">Rent</a>
 </nav>
 
-
 <button class="lang-toggle" onclick="toggleLanguage()">日本語 / EN</button>
 </header>
-
 
 <main class="page-content">
 <img src="images/contact.jpg" alt="Contact Jokare" class="page-img">
 
-
 <div class="contact-box">
 <h2 data-en="Send a Message" data-ja="メッセージ送信">Send a Message</h2>
 
+<form id="contactForm">
+  <input type="hidden" name="source" id="source">
 
-<form id="contactForm" onsubmit="return sendMail(event)">
-<!-- source routing -->
-<input type="hidden" name="source" id="source">
+  <div class="form-row">
+    <label data-en="Your name" data-ja="お名前">Your name</label>
+    <input type="text" name="name" required>
+  </div>
 
+  <div class="form-row">
+    <label data-en="Your email address" data-ja="あなたのメールアドレス">Your email address</label>
+    <input type="email" name="email" required>
+  </div>
 
-<div class="form-row">
-<label data-en="Your name" data-ja="お名前">Your name</label>
-<input type="text" name="name" required>
-</div>
+  <div class="form-row">
+    <label data-en="Message" data-ja="メッセージ">Message</label>
+    <textarea name="message" rows="6" required></textarea>
+  </div>
 
+  <button type="submit" class="cta" data-en="Send" data-ja="送信">Send</button>
 
-<div class="form-row">
-<label data-en="Your email address" data-ja="あなたのメールアドレス">Your email address</label>
-<input type="email" name="email" required>
-</div>
+  <p class="form-note"
+     data-en="Your message will be sent securely via Formspree."
+     data-ja="メッセージは安全にFormspree経由で送信されます。">
+     Your message will be sent securely via Formspree.
+  </p>
 
-
-<div class="form-row">
-<label data-en="Message" data-ja="メッセージ">Message</label>
-<textarea name="message" rows="6" required></textarea>
-</div>
-
-
-<button type="submit" class="cta" data-en="Send" data-ja="送信">Send</button>
-
-
-<p class="form-note"
-data-en="This opens your email app."
-data-ja="これはあなたのメールアプリを開きます。">
-This opens your email app.
-</p>
+  <p id="formFeedback" style="margin-top:15px;"></p>
 </form>
 </div>
 </main>
 
-
 <footer>
 <p>&copy; 2025 Jokare</p>
 </footer>
-
 
 <script src="script.js"></script>
 </body>
