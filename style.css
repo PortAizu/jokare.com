@@ -1,4 +1,6 @@
-/* GLOBAL */
+/* ===============================
+   GLOBAL
+================================ */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,7 +9,9 @@ body {
     color: #333;
 }
 
-/* HEADER */
+/* ===============================
+   HEADER
+================================ */
 header {
     background-color: #008080;
     color: white;
@@ -15,11 +19,10 @@ header {
     text-align: center;
 }
 
-header .logo {
+.logo {
     width: 60px;
-    height: auto;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 10px;
 }
 
 header h1 {
@@ -27,19 +30,21 @@ header h1 {
     font-size: 28px;
 }
 
+/* ===============================
+   NAV
+================================ */
 nav {
     margin-top: 15px;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 12px;
+    flex-wrap: wrap;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
     padding: 6px 10px;
     border-radius: 4px;
 }
@@ -48,42 +53,44 @@ nav a:hover {
     background-color: rgba(255,255,255,0.15);
 }
 
-/* LANGUAGE BUTTON */
+/* ===============================
+   LANGUAGE BUTTON
+================================ */
 .lang-toggle {
     margin-top: 15px;
-    background-color: #ffffff;
+    background-color: white;
     color: #008080;
     border: none;
     padding: 8px 15px;
-    font-size: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.lang-toggle:hover {
-    background-color: #e0ffff;
-}
-
-/* MAIN SERVICES GRID */
+/* ===============================
+   SERVICES GRID
+================================ */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
     padding: 20px;
 }
 
+/* ===============================
+   SERVICE CARD
+================================ */
 .service {
     background-color: white;
     padding: 25px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .service h2 {
@@ -91,145 +98,84 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-.service p {
-    font-size: 15px;
-    line-height: 1.6;
+/* ===============================
+   IMAGE WRAPPER (FIXED HEIGHT)
+================================ */
+.service-img-wrap {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* FIXED SERVICE IMAGES (transparent PNG background) */
+/* ===============================
+   IMAGE
+================================ */
 .service-img {
     width: 100%;
-    max-width: 400px;
-    max-height: 200px;
-    height: auto;
-    margin-bottom: 15px;
-    padding: 15px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    object-fit: contain;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 220px;          /* ✅ consistent height */
+    object-fit: contain;   /* ✅ no cropping */
+    display: block;
+    margin: 0 auto;
+    background: transparent;
+    transition: transform 0.6s ease;
 }
 
-/* CTA BUTTONS */
-button.cta, a.cta {
+/* ===============================
+   IMAGE HOVER EFFECT
+================================ */
+.service:hover .service-img-wrap {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.18);
+}
+
+.service:hover .service-img {
+    transform: scale(1.06);
+}
+
+/* ===============================
+   CTA BUTTON
+================================ */
+a.cta {
     display: inline-block;
+    margin-top: 10px;
     background-color: #008080;
     color: white;
-    border: none;
     padding: 14px;
-    font-size: 17px;
     border-radius: 6px;
-    cursor: pointer;
     text-decoration: none;
     width: 100%;
-    transition: transform 0.2s;
+    transition: background-color 0.25s ease, transform 0.25s ease;
 }
 
-button.cta:hover, a.cta:hover {
+a.cta:hover {
     background-color: #006666;
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
-/* FOOTER */
+/* ===============================
+   FOOTER
+================================ */
 footer {
     background-color: #004c4c;
     color: white;
     text-align: center;
     padding: 18px;
-    font-size: 14px;
     margin-top: 40px;
 }
 
-/* PAGE CONTENT STYLING */
-.page-content {
-    max-width: 700px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-}
-
-/* FIXED PAGE IMAGES (transparent PNG background) */
-.page-img {
-    width: 100%;
-    max-width: 600px;
-    max-height: 300px;
-    height: auto;
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    object-fit: contain;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* CONTACT BOX */
-.contact-box {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    margin-top: 20px;
-}
-
-.form-row {
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.form-row label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-row input, 
-.form-row textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-
-.form-note {
-    font-size: 13px;
-    color: #555;
-    margin-top: 10px;
-}
-
-/* MOBILE */
+/* ===============================
+   MOBILE
+================================ */
 @media (max-width: 600px) {
     header h1 {
         font-size: 22px;
     }
 
-    nav a {
-        font-size: 14px;
-        padding: 5px 8px;
-    }
-
-    .service {
-        padding: 15px;
-    }
-
-    .service h2 {
-        font-size: 18px;
-    }
-
-    .service p {
-        font-size: 14px;
-    }
-
     .service-img {
-        max-height: 160px;
-    }
-
-    .page-img {
-        max-height: 220px;
-    }
-
-    button.cta, a.cta {
-        font-size: 15px;
-        padding: 12px;
+        height: 180px;
     }
 }
