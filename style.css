@@ -96,12 +96,17 @@ nav a:hover {
     line-height: 1.6;
 }
 
+/* FIXED SERVICE IMAGES (transparent PNG background) */
 .service-img {
     width: 100%;
     max-width: 400px;
+    max-height: 200px;
     height: auto;
     margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
     border-radius: 8px;
+    object-fit: contain;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
@@ -135,35 +140,6 @@ footer {
     margin-top: 40px;
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 22px;
-    }
-
-    nav a {
-        font-size: 14px;
-        padding: 5px 8px;
-    }
-
-    .service {
-        padding: 15px;
-    }
-
-    .service h2 {
-        font-size: 18px;
-    }
-
-    .service p {
-        font-size: 14px;
-    }
-
-    button.cta, a.cta {
-        font-size: 15px;
-        padding: 12px;
-    }
-}
-
 /* PAGE CONTENT STYLING */
 .page-content {
     max-width: 700px;
@@ -172,12 +148,17 @@ footer {
     text-align: center;
 }
 
+/* FIXED PAGE IMAGES (transparent PNG background) */
 .page-img {
     width: 100%;
     max-width: 600px;
+    max-height: 300px;
     height: auto;
     margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
     border-radius: 8px;
+    object-fit: contain;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
@@ -214,4 +195,41 @@ footer {
     font-size: 13px;
     color: #555;
     margin-top: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+
+    .service {
+        padding: 15px;
+    }
+
+    .service h2 {
+        font-size: 18px;
+    }
+
+    .service p {
+        font-size: 14px;
+    }
+
+    .service-img {
+        max-height: 160px;
+    }
+
+    .page-img {
+        max-height: 220px;
+    }
+
+    button.cta, a.cta {
+        font-size: 15px;
+        padding: 12px;
+    }
 }
