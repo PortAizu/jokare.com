@@ -5,16 +5,14 @@
   <title>Jokare</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
   <link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 
 <header>
-  <img src="images/logo.png" alt="Jokare Logo" class="logo">
+  <img src="images/logo.png" class="logo">
   <h1 data-en="Jokare" data-ja="ジョカレ">Jokare</h1>
-  <p data-en="Language • Culture • People" data-ja="言語・文化・人をつなぐ">
-    Language • Culture • People
-  </p>
 
   <nav>
     <a href="index.html">Home</a>
@@ -24,44 +22,43 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <button class="lang-toggle" onclick="toggleLanguage()">日本語 / EN</button>
+  <button class="lang-toggle" onclick="toggleLanguage()">EN / 日本語</button>
 </header>
 
 <main class="services-grid">
 
-  <section class="service">
+  <div class="service">
     <div class="service-img-wrap">
-      <img src="images/language.png" alt="English lesson" class="service-img">
+      <img src="images/language.png" class="service-img">
     </div>
-    <h2>Jokare Language</h2>
-    <p>English lessons for Japanese learners.</p>
-    <a class="cta" href="contact.html?source=language">Book a Lesson</a>
-  </section>
+    <h2>Language</h2>
+    <p>English lessons for Japan.</p>
+    <a class="cta" href="language.html">Learn More</a>
+  </div>
 
-  <section class="service">
+  <div class="service">
     <div class="service-img-wrap">
-      <img src="images/store.png" alt="Japanese merchandise" class="service-img">
+      <img src="images/store.png" class="service-img">
     </div>
-    <h2>Jokare Store</h2>
-    <p>Japanese merchandise for global customers.</p>
-    <a class="cta" href="contact.html?source=store">Shop Now</a>
-  </section>
+    <h2>Store</h2>
+    <p>Japanese products worldwide.</p>
+    <a class="cta" href="store.html">Visit Store</a>
+  </div>
 
-  <section class="service">
+  <div class="service">
     <div class="service-img-wrap">
-      <img src="images/rent.png" alt="Hire a foreigner" class="service-img">
+      <img src="images/rent.png" class="service-img">
     </div>
-    <h2>Jokare Rent</h2>
-    <p>Hire a foreigner for language practice, cultural help or events.</p>
-    <a class="cta" href="contact.html?source=rent">Hire Now</a>
-  </section>
+    <h2>Rent</h2>
+    <p>Hire a foreigner in Japan.</p>
+    <a class="cta" href="rent.html">Hire Now</a>
+  </div>
 
 </main>
 
 <footer>
-  <p>&copy; 2025 Jokare</p>
+  <p>© Jokare</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
