@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
-  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="icon" type="image/png" href="/images/logo.png">
 </head>
 <body>
 
 <header>
-  <img src="images/logo.png" class="logo">
+  <img src="/images/logo.png" class="logo">
   <h1 data-en="Jokare" data-ja="ジョカレ">Jokare</h1>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="language.html">Language</a>
-    <a href="store.html">Store</a>
-    <a href="rent.html">Rent</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" data-en="Home" data-ja="ホーム">Home</a>
+    <a href="language.html" data-en="Language" data-ja="語学">Language</a>
+    <a href="store.html" data-en="Store" data-ja="ストア">Store</a>
+    <a href="rent.html" data-en="Rent" data-ja="レンタル">Rent</a>
+    <a href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a>
   </nav>
 
   <button class="lang-toggle" onclick="toggleLanguage()">EN / 日本語</button>
@@ -29,29 +29,47 @@
 
   <div class="service">
     <div class="service-img-wrap">
-      <img src="images/language.png" class="service-img">
+      <img src="/images/language.png" class="service-img">
     </div>
-    <h2>Language</h2>
-    <p>English lessons for Japan.</p>
-    <a class="cta" href="language.html">Learn More</a>
+    <h2 data-en="Language" data-ja="語学">Language</h2>
+    <p data-en="English lessons for Japan."
+       data-ja="日本向けの英語レッスンです。">
+       English lessons for Japan.
+    </p>
+    <a class="cta" href="language.html"
+       data-en="Learn More" data-ja="詳しく見る">
+       Learn More
+    </a>
   </div>
 
   <div class="service">
     <div class="service-img-wrap">
-      <img src="images/store.png" class="service-img">
+      <img src="/images/store.png" class="service-img">
     </div>
-    <h2>Store</h2>
-    <p>Japanese products worldwide.</p>
-    <a class="cta" href="store.html">Visit Store</a>
+    <h2 data-en="Store" data-ja="ストア">Store</h2>
+    <p data-en="Japanese products worldwide."
+       data-ja="日本の商品を世界へお届けします。">
+       Japanese products worldwide.
+    </p>
+    <a class="cta" href="store.html"
+       data-en="Visit Store" data-ja="ストアを見る">
+       Visit Store
+    </a>
   </div>
 
   <div class="service">
     <div class="service-img-wrap">
-      <img src="images/rent.png" class="service-img">
+      <img src="/images/rent.png" class="service-img">
     </div>
-    <h2>Rent</h2>
-    <p>Hire a foreigner in Japan.</p>
-    <a class="cta" href="rent.html">Hire Now</a>
+    <h2 data-en="Rent" data-ja="レンタル">Rent</h2>
+    <p data-en="Hire a foreigner in Japan."
+       data-ja="日本で外国人を雇うサービスです。">
+       Hire a foreigner in Japan.
+    </p>
+    <a class="cta" href="rent.html"
+       data-en="Hire Now" data-ja="今すぐ依頼">
+       Hire Now
+    </a>
   </div>
 
 </main>

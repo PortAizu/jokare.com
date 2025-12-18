@@ -11,14 +11,14 @@
 
 <header>
   <img src="/images/logo.png" class="logo">
-  <h1>Jokare</h1>
+  <h1 data-en="Jokare" data-ja="ジョカレ">Jokare</h1>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="language.html">Language</a>
-    <a href="store.html">Store</a>
-    <a href="rent.html">Rent</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" data-en="Home" data-ja="ホーム">Home</a>
+    <a href="language.html" data-en="Language" data-ja="語学">Language</a>
+    <a href="store.html" data-en="Store" data-ja="ストア">Store</a>
+    <a href="rent.html" data-en="Rent" data-ja="レンタル">Rent</a>
+    <a href="contact.html" data-en="Contact" data-ja="お問い合わせ">Contact</a>
   </nav>
 
   <button class="lang-toggle" onclick="toggleLanguage()">EN / 日本語</button>
@@ -30,27 +30,31 @@
     <img src="/images/contact.png" class="page-img">
   </div>
 
-  <h2>Contact</h2>
+  <h2 data-en="Contact" data-ja="お問い合わせ">Contact</h2>
 
   <form id="contactForm">
     <input type="hidden" id="source" name="source">
 
     <div class="form-row">
-      <label>Name</label>
+      <label data-en="Name" data-ja="お名前">Name</label>
       <input type="text" name="name" required>
     </div>
 
     <div class="form-row">
-      <label>Email</label>
+      <label data-en="Email" data-ja="メールアドレス">Email</label>
       <input type="email" name="email" required>
     </div>
 
     <div class="form-row">
-      <label>Message</label>
+      <label data-en="Message" data-ja="メッセージ">Message</label>
       <textarea name="message" rows="5" required></textarea>
     </div>
 
-    <button type="submit" class="cta">Send</button>
+    <button type="submit" class="cta"
+            data-en="Send" data-ja="送信">
+      Send
+    </button>
+
     <p id="formFeedback"></p>
   </form>
 
