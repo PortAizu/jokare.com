@@ -1,34 +1,37 @@
 // ===============================
-// SHARED HEADER LOADER
+// LOAD SHARED HEADER
 // ===============================
 document.addEventListener("DOMContentLoaded", async () => {
-  const headerTarget = document.getElementById("header");
-  if (headerTarget) {
+  const header = document.getElementById("header");
+  if (header) {
     const res = await fetch("/header.html");
-    headerTarget.innerHTML = await res.text();
+    header.innerHTML = await res.text();
   }
 
-  initLanguageSystem();
+  initLanguage();
+  initContactForm();
 });
 
 // ===============================
-// LANGUAGE SYSTEM (FINAL)
+// LANGUAGE SYSTEM
 // ===============================
 let isJapanese = false;
 
-function initLanguageSystem() {
-  const savedLang = localStorage.getItem("lang");
+function initLanguage() {
+  const saved = localStorage.getItem("lang");
 
-  if (savedLang) {
-    isJapanese = savedLang === "ja";
+  if (saved) {
+    isJapanese = saved === "ja";
   } else {
-    // Default to Japanese for Japan visitors
     const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    if (tz === "Asia/Tokyo") {
-      isJapanese = true;
-    }
+    if (tz === "Asia/Tokyo") isJapanese = true;
   }
 
+  applyLanguage();
+}
+
+function toggleLanguage() {
+  isJapanese = !isJapanese;
   applyLanguage();
 }
 
@@ -39,7 +42,6 @@ function applyLanguage() {
 
   localStorage.setItem("lang", isJapanese ? "ja" : "en");
 
-  // Active indicator
   const en = document.getElementById("lang-en");
   const ja = document.getElementById("lang-ja");
   if (en && ja) {
@@ -47,21 +49,15 @@ function applyLanguage() {
     ja.classList.toggle("active", isJapanese);
   }
 
-  // Fade animation
   document.body.classList.remove("fade");
   void document.body.offsetWidth;
   document.body.classList.add("fade");
 }
 
-function toggleLanguage() {
-  isJapanese = !isJapanese;
-  applyLanguage();
-}
-
 // ===============================
-// CONTACT FORM (SAFE)
+// CONTACT FORM
 // ===============================
-document.addEventListener("DOMContentLoaded", () => {
+function initContactForm() {
   const form = document.getElementById("contactForm");
   if (!form) return;
 
@@ -71,11 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", e => {
     e.preventDefault();
-    const formData = new FormData(form);
+    const data = new FormData(form);
 
     fetch("https://formspree.io/f/meoydyrq", {
       method: "POST",
-      body: formData,
+      body: data,
       headers: { Accept: "application/json" }
     })
       .then(res => {
@@ -88,4 +84,4 @@ document.addEventListener("DOMContentLoaded", () => {
           "❌ Failed to send message.";
       });
   });
-});
+}
