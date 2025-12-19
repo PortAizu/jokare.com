@@ -227,3 +227,27 @@ footer {
         margin: 24px 16px;
     }
 }
+/* ===============================
+   LANGUAGE INDICATOR
+================================ */
+.lang-toggle span {
+  opacity: 0.4;
+  font-weight: bold;
+}
+
+.lang-toggle span.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* ===============================
+   FADE ANIMATION
+================================ */
+body.fade {
+  animation: fadeSwitch 0.25s ease;
+}
+
+@keyframes fadeSwitch {
+  from { opacity: 0.3; }
+  to { opacity: 1; }
+}
