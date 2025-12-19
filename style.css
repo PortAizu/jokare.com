@@ -46,25 +46,6 @@ nav a:hover {
   border-radius: 4px;
 }
 
-.lang-toggle span {
-  opacity: 0.4;
-}
-
-.lang-toggle span.active {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/* FADE */
-body.fade {
-  animation: fade 0.25s ease;
-}
-
-@keyframes fade {
-  from { opacity: 0.3; }
-  to { opacity: 1; }
-}
-
 /* CONTENT */
 .services-grid {
   display: grid;
